@@ -1,0 +1,53 @@
+
+
+body{
+    padding: 20px
+}
+.fom-f{
+    margin: 20 auto
+}
+.links svg{
+    display: none;
+}
+.links .justify-between{
+    padding: 20px;
+}
+.links .sm:justify-between{
+    padding: 20px;
+}
+.form-control{
+    /*width: 35%;*/
+    margin: 10px 0;
+}
+table{
+    margin: 10px 0;
+}
+td{
+    padding: 5px 10px;
+}
+tr{
+    border-width: 1px;
+}
+.form-filter{
+    display: flex;
+    justify-content: space-between;
+}
+.form-filter form button{
+    margin-bottom: 10px
+}
+.nav-button{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.course{
+    margin: 0 auto;
+    padding: 10px;
+    background: #637db6;
+    border-radius: 4px;
+    width: fit-content;
+}
+.course_link{
+    /*text-decoration: none;*/
+    color: #ffffff;
+}
