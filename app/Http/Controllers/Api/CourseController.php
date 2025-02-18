@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\Course;
@@ -28,11 +29,8 @@ class CourseController extends Controller
         }
         $course = json_decode($response->getBody(), true);
 
-
         if (isset($course['error'])) return  Course::find(1)->course;
 
-
-        //return print_arr($course);
         return $course['quotes']['USDRUB'];
     }
 }

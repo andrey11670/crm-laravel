@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Warehouses;
 
+use App\Http\Controllers\Controller;
 use App\Models\Warehouse;
-use Illuminate\Http\Request;
-use Illuminate\View\View;
 
 class WarehouseController extends Controller
 {

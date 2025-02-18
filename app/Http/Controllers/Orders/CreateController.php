@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Orders;
 
+use App\Http\Controllers\Controller;
 use App\Models\Product;
-use App\Models\Stock;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
-use Illuminate\View\View;
 
 class CreateController extends Controller
 {

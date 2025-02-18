@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Movement;
 
 
-use App\Models\Movement_history;
-use App\Models\Product;
-use App\Models\Stock;
-use App\Models\warehouse;
+use App\Http\Controllers\Controller;
 use App\Services\Service;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
+
 
 class MovementController extends Controller
 {
@@ -22,7 +19,7 @@ class MovementController extends Controller
             $limit = $request->input('limit', 10);
 
            $result = (new Service())->movement($warehouse, $product, $startDate, $endDate, $limit);
-            //dd($result);
+
             return View('movement')->with('movement', $result['movement'])->with('warehouse_name', $result['warehouse_name'])->with('warehouse', $result['warehouse'])->with('product', $result['product']);
         }
 }

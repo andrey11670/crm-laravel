@@ -1,12 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Orders;
 
-use App\Models\Order;
-use App\Models\Product;
+use App\Http\Controllers\Controller;
 use App\Services\Service;
-use Illuminate\Http\Request;
-use Illuminate\View\View;
 
 class ShowController extends Controller
 {

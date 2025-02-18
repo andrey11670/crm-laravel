@@ -1,15 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Orders;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateRequest;
-use App\Models\Order;
-use App\Models\Order_item;
-use App\Models\Product;
-use App\Models\Stock;
 use App\Services\Service;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
 class UpdateController extends Controller
@@ -19,9 +14,9 @@ class UpdateController extends Controller
         $count = $validated['count'];
         $result = (new Service())->update($order, $validated, $count);
         //если редирект произошел ранише в резулте придет обьект с ошибкой
-        if (gettype($result) === "object"){
+        if (gettype($result) === "object")
             return  Redirect::to("/orders/{$order}");
-        }
+
         return  Redirect::to("/orders/{$order}")->with('errors', [])->with('success', 'Заказ изменен');
     }
 }

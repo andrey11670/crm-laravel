@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Products;
 
+use App\Http\Controllers\Controller;
 use App\Models\Product;
-use App\Models\Stock;
-use Illuminate\Http\Request;
-use Illuminate\View\View;
 
 class ProductController extends Controller
 {

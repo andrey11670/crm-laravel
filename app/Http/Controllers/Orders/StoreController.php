@@ -1,20 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Orders;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreRequest;
-use App\Models\Order;
-use App\Models\Order_item;
-use App\Models\Product;
-use App\Models\Stock;
-use App\Models\warehouse;
 use App\Services\Service;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\View\View;
 
 class StoreController extends Controller
 {

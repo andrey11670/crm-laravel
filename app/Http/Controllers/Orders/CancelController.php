@@ -1,13 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Orders;
 
-use App\Models\Order;
-use App\Models\Order_item;
-use App\Models\Stock;
+use App\Http\Controllers\Controller;
 use App\Services\Service;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
 
 class CancelController extends Controller
 {

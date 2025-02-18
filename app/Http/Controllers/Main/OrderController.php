@@ -1,15 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Main;
 
-use App\Models\Order;
-use App\Models\Product;
-use App\Models\warehouse;
+use App\Http\Controllers\Api\CourseController;
+use App\Http\Controllers\Controller;
 use App\Services\Service;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
-use Illuminate\Pagination\Concerns\Order\Paginatable;
-use PhpParser\Node\Stmt\Else_;
 
 class OrderController extends Controller
 {
@@ -17,7 +13,6 @@ class OrderController extends Controller
 
         $result = (new Service())->order($request);
         $course = (new CourseController())->__invoke();
-        //dd($course);
 
         return View('order')->with('order', $result['order'])->with('warehouse', $result['warehouse'])->with('customer', $result['customer'])->with('course', $course);
     }
